@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E19F"
+    style="@style/Theme.NeoQRCodeScanner"
+    tools:context=".GenQrCodeActivity">
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/MKQRCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        >
+        <TextView
+            android:id="@+id/QrCodeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="QR Code will be shown here"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:elevation="1dp"
+            android:padding = "4dp"
+            android:textSize = "15sp"
+            />
+        <ImageView
+            android:id="@+id/genQrCodeImg"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background = "@color/white"
+            />
+    </FrameLayout>
+    <EditText
+        android:id="@+id/genEdtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MKQRCode"
+        android:layout_marginLeft="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_marginRight="15dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:hint="Enter text to be converted in QR code"
+        android:inputType="text"
+        android:gravity="center_horizontal" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gntCodeBtn"
+        android:layout_below="@id/genEdtTxt"
+        android:background="@drawable/back_button"
+        android:text="Generate QR Code"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+
+        />
+</RelativeLayout>
